@@ -16,7 +16,7 @@ if not ТОКЕН:
 этот_файл = __file__
 this_folder = os.path.dirname(этот_файл)
 
-def отправить_сообщение(сообщение, айди, кнопки):
+def отправить_сообщение(сообщение, айди, кнопки = None):
     if type(айди) is int:
         БОТ.send_message(chat_id=айди, text=сообщение, reply_markup=кнопки)
     else:
